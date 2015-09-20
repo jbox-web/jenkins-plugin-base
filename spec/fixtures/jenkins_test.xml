@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.model.Descriptor plugin="plugin-foo">
+  <foo>bar</foo>
+  <bar>foo</bar>
+  <boo></boo>
+</hudson.model.Descriptor>

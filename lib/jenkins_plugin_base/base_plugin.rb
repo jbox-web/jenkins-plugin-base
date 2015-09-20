@@ -1,11 +1,12 @@
 module JenkinsPluginBase
   module BasePlugin
 
+    class UnknownAttributeError < StandardError; end
+
     class << self
       def included(receiver)
         receiver.send(:extend, ClassMethods)
         receiver.class_eval do
-
           # Basic Jenkins includes
           include Jenkins::Model
           include Jenkins::Model::DescribableNative
@@ -19,36 +20,20 @@ module JenkinsPluginBase
 
     module ClassMethods
 
-      def set_plugin_name(name)
-        @plugin_name = name
-      end
-
-
-      def set_plugin_settings(settings = {})
-        @plugin_settings = settings
-      end
-
-
-      def plugin_name
-        @plugin_name
-      end
-
-
-      def plugin_settings
-        @plugin_settings
-      end
-
-
       #
       # This is the (not so) magic method to retrieve Global configuration settings.
       #
       def get_setting_value_for(setting)
-        descriptor = Jenkins::Plugin.instance.descriptors[self]
-        if descriptor.respond_to?(setting)
-          descriptor.send(setting)
+        if plugin_descriptor.respond_to?(setting)
+          plugin_descriptor.send(setting)
         else
-          raise NoMethodError
+          raise UnknownAttributeError.new("Unknown attribute: #{setting}")
         end
+      end
+
+
+      def plugin_descriptor
+        Jenkins::Plugin.instance.descriptors[self]
       end
 
     end
