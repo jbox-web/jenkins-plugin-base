@@ -15,7 +15,7 @@ JenkinsLoader.new.load!(version, overwrite, url)
 ## Configure SimpleCov
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter,
-  CodeClimate::TestReporter::Formatter
+  # CodeClimate::TestReporter::Formatter
 ]
 
 ## Start Simplecov
