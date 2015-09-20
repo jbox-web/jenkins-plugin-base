@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'simplecov'
 require 'rspec'
+require 'codeclimate-test-reporter'
 
 version   = ENV['JENKINS_VERSION'] || 'latest'
 overwrite = ENV['JENKINS_OVERWRITE_VERSION'] || 'false'
@@ -13,7 +14,8 @@ JenkinsLoader.new.load!(version, overwrite, url)
 
 ## Configure SimpleCov
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter
+  SimpleCov::Formatter::HTMLFormatter,
+  CodeClimate::TestReporter::Formatter
 ]
 
 ## Start Simplecov
