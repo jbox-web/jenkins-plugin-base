@@ -3,14 +3,8 @@ require 'simplecov'
 require 'rspec'
 require 'codeclimate-test-reporter'
 
-version   = ENV['JENKINS_VERSION'] || 'latest'
-overwrite = ENV['JENKINS_OVERWRITE_VERSION'] || 'false'
-url       = ENV['JENKINS_URL']
-
-overwrite = overwrite == 'false' ? false : true
-
-require 'jenkins_loader'
-JenkinsLoader.new.load!(version, overwrite, url)
+require 'jenkins_plugin_base/loader'
+JenkinsPluginBase::Loader.new.load!
 
 ## Configure SimpleCov
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
@@ -39,4 +33,5 @@ RSpec.configure do |config|
   end
 end
 
+$:.unshift Pathname(__FILE__).dirname.join('../lib').to_s
 require 'jenkins_plugin_base'
