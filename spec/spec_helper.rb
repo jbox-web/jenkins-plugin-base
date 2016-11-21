@@ -7,10 +7,10 @@ require 'jenkins_plugin_base/loader'
 JenkinsPluginBase::Loader.new.load!
 
 ## Configure SimpleCov
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
   # CodeClimate::TestReporter::Formatter
-]
+])
 
 ## Start Simplecov
 SimpleCov.start do
