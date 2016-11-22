@@ -19,8 +19,10 @@ SimpleCov.start do
   add_filter '/lib/active_support'
 end
 
+## Load helper modules
 Dir[Pathname(__FILE__).dirname.join('support', '**', '*.rb')].each { |f| require f }
 
+## Configure RSpec
 RSpec.configure do |config|
   # clean out jruby-related stacktrace lines that do not add meaningful information
   config.backtrace_exclusion_patterns << /sun\.reflect/
