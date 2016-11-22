@@ -5,6 +5,12 @@ require 'jenkins/plugin/tools/resolver'
 require 'jenkins/plugin/tools/manifest'
 require 'zip'
 
+module Jenkins
+  def self.rspec_ewwww_gross_hack?
+    true
+  end
+end
+
 module JenkinsPluginBase
   class Loader
 
