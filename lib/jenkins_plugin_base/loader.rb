@@ -85,6 +85,7 @@ module JenkinsPluginBase
 
 
       def extract_dependencies
+        FileUtils.mkdir_p(jenkins_plugins_path)
         FileUtils.cp(ruby_runtime_path, jenkins_plugins_path)
         extract_zip(ruby_runtime_path, jenkins_plugins_path('ruby-runtime'))
         FileUtils.cp(ruby_runtime_klass_path, jenkins_plugins_path('ruby-runtime', 'WEB-INF', 'lib'))
