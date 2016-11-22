@@ -57,7 +57,7 @@ module JenkinsPluginBase
 
 
       def spec
-        OpenStruct.new(version: '1.0.0', name: 'foo', display_name: 'Foo', dependencies: { 'ruby-runtime' => '0.12' })
+        OpenStruct.new(version: '1.0.0', name: 'foo', display_name: 'Foo', dependencies: { 'ruby-runtime' => '0.13' })
       end
 
 
