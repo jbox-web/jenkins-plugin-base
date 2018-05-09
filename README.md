@@ -4,7 +4,6 @@
 [![GitHub release](https://img.shields.io/github/release/jbox-web/jenkins-plugin-base.svg)](https://github.com/jbox-web/jenkins-plugin-base/releases/latest)
 [![Build Status](https://travis-ci.org/jbox-web/jenkins-plugin-base.svg?branch=master)](https://travis-ci.org/jbox-web/jenkins-plugin-base)
 [![Code Climate](https://codeclimate.com/github/jbox-web/jenkins-plugin-base/badges/gpa.svg)](https://codeclimate.com/github/jbox-web/jenkins-plugin-base)
-[![Dependency Status](https://gemnasium.com/jbox-web/jenkins-plugin-base.svg)](https://gemnasium.com/jbox-web/jenkins-plugin-base)
 
 ### A Ruby gem to develop Jenkins plugins in Ruby, easy ;)
 
