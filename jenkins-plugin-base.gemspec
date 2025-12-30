@@ -1,4 +1,5 @@
-# -*- encoding: utf-8 -*-
+# frozen_string_literal: true
+
 $:.push File.expand_path('../lib', __FILE__)
 require 'jenkins_plugin_base/version'
 
@@ -13,10 +14,7 @@ Gem::Specification.new do |s|
   s.description = %q{This lib provides boilerplate code to write Jenkins plugins in Ruby}
   s.license     = 'MIT'
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ['lib']
+  s.files = `git ls-files`.split("\n")
 
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
