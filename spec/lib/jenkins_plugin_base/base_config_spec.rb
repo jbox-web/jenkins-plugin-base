@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'fileutils'
 
-describe JenkinsPluginBase::BaseConfig do
+RSpec.describe JenkinsPluginBase::BaseConfig do
 
   include JenkinsHelper
 

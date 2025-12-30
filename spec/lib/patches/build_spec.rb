@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Jenkins::Model::Build do
+RSpec.describe Jenkins::Model::Build do
 
   include Jenkins::Model
 

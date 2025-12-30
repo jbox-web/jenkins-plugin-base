@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe JenkinsPluginBase::BasePlugin do
+RSpec.describe JenkinsPluginBase::BasePlugin do
 
   include JenkinsHelper
 
