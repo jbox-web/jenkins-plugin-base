@@ -1,5 +1,22 @@
+# Ignore bundler config.
+.bundle/
+
+# Ignore Gemfile.lock
+Gemfile.lock
+gemfiles/*.lock
+
+# Ignore test files
+coverage/
+
+# Ignore built gems
 /*.gem
-/*.lock
-/coverage
+
+# Ignore MacOS files
+.DS_Store
+
+# Ignore JRuby runtime
 /work
-/.ruby-version
+
+# Ignore local env config
+/.tool-versions
+/.envrc
