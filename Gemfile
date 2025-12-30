@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 
 gemspec
 
-group :development, :test do
-  gem 'jenkins-peace', '~> 1.0.0', git: 'https://github.com/jbox-web/jenkins-peace.git'
-end
+# Dev libs
+gem 'jenkins-peace', '~> 1.0.0', git: 'https://github.com/jbox-web/jenkins-peace.git'
+gem 'rake'
+gem 'rspec'
+gem 'simplecov'
 
-gem 'codeclimate-test-reporter', group: :test, require: nil
+gem 'jpi',                    '>= 0.4.0'
+gem 'jenkins-plugin-runtime', '>= 0.2.3'

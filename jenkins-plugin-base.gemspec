@@ -15,11 +15,4 @@ Gem::Specification.new do |s|
   s.license     = 'MIT'
 
   s.files = `git ls-files`.split("\n")
-
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'simplecov'
-
-  s.add_development_dependency 'jpi',                    '~> 0.4', '>= 0.4.0'
-  s.add_development_dependency 'jenkins-plugin-runtime', '~> 0.2', '>= 0.2.3'
 end
